@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
     # This is local app
     'alx_travel_app.listings',
-    'listings',
+    #'listings',
 
 
 ]
@@ -100,6 +100,9 @@ DATABASES = {
         'PASSWORD': env('DB_PASSWORD'),
         'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
+	'OPTIONS': {
+            'unix_socket': env('DB_SOCKET'),
+        },
     }
 }
 

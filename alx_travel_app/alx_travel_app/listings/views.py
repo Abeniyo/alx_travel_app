@@ -2,6 +2,8 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-@api_view(['GET'])
+from django.http import HttpResponse
+
 def index(request):
-    return Response({"message": "Welcome to ALX Travel App Listings API!"})
+    return HttpResponse("Hello from listings!")
+
